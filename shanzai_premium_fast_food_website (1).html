@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shanzai پخلنځي | Fast Food Restaurant — Canal Town, Peshawar</title>
+  <!-- Google Fonts: Playfair Display (for italic serif Shanzai script), Oswald, Plus Jakarta Sans & Noto Naskh Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Noto+Naskh+Arabic:wght@700;800&family=Oswald:wght@500;600;700&family=Playfair+Display:ital,wght@1,700;1,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: {
+              950: '#0b0d11',
+              900: '#12161f',
+              800: '#181e29',
+              700: '#232b3a',
+            },
+            brandRed: {
+              DEFAULT: '#dc2626',
+              dark: '#b91c1c',
+              light: '#ef4444'
+            },
+            brandGold: {
+              DEFAULT: '#facc15',
+              dark: '#eab308'
+            },
+            brandCream: {
+              DEFAULT: '#f8fafc',
+              paper: '#f4efe6',
+              muted: '#94a3b8'
+            }
+          },
+          fontFamily: {
+            display: ['Oswald', 'sans-serif'],
+            serifItalic: ['Playfair Display', 'serif'],
+            cursive: ['Dancing Script', 'cursive'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            pashto: ['Noto Naskh Arabic', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --bg-deep: #0b0d11;
+      --bg-surface: #12161f;
+      --bg-card: #181e29;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(220, 38, 38, 0.55);
+      --primary-red: #dc2626;
+      --accent-gold: #facc15;
+      --text-cream: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-deep);
+      color: var(--text-cream);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .font-display {
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    .shanzai-serif {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+
+    .pashto-logo-text {
+      font-family: 'Noto Naskh Arabic', serif;
+      color: #facc15;
+      text-shadow: 0 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      line-height: 1.35;
+    }
+
+    .neon-pashto-yellow {
+      font-family: 'Noto Naskh Arabic', serif;
+      color: #fde047;
+      text-shadow: 0 0 10px rgba(250, 204, 21, 0.8), 0 0 22px rgba(250, 204, 21, 0.45);
+    }
+
+    .neon-pashto-red {
+      font-family: 'Noto Naskh Arabic', serif;
+      color: #ef4444;
+      text-shadow: 0 0 10px rgba(239, 68, 68, 0.85), 0 0 22px rgba(220, 38, 38, 0.55);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b0d11;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #232b3a;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #dc2626;
+    }
+
+    /* Clean Premium Card */
+    .premium-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.65);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.25s ease,
+                  box-shadow 0.25s ease;
+    }
+
+    .premium-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-hover);
+      box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.85);
+    }
+
+    /* Image Zoom Container */
+    .img-zoom-wrap {
+      overflow: hidden;
+      position: relative;
+      background-color: #12161f;
+    }
+    .img-zoom-wrap img {
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .premium-card:hover .img-zoom-wrap img {
+      transform: scale(1.05);
+    }
+
+    /* Glass Navbar */
+    .glass-nav {
+      background: rgba(11, 13, 17, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Subtle Ambient Glow */
+    .hero-glow {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(220, 38, 38, 0.16) 0%, rgba(250, 204, 21, 0.06) 45%, rgba(11, 13, 17, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Dark Theme Google Map Filter */
+    .dark-map-iframe {
+      filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(92%);
+    }
+
+    /* Authentic Printed Menu Card Texture */
+    .printed-menu-card {
+      background: linear-gradient(145deg, #f7f4ee 0%, #eae3d5 100%);
+      color: #1c1917;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8);
+    }
+
+    .brush-banner {
+      background: #27272a;
+      color: #ffffff;
+      clip-path: polygon(3% 0%, 98% 4%, 95% 96%, 0% 100%);
+    }
+
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .toast-enter {
+      animation: slideInUp 0.22s ease-out forwards;
+    }
+
+    @keyframes subtlePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.16); }
+    }
+    .badge-pop {
+      animation: subtlePulse 0.28s ease-in-out;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-brandRed selection:text-white">
+
+  <!-- ==========================================================================
+       TOP INFO STRIP: REAL ADDRESS, FREE DELIVERY & LATE-NIGHT HOURS
+       ========================================================================== -->
+  <div class="bg-charcoal-900 border-b border-white/10 text-[11px] sm:text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-3 text-gray-300">
+        <span class="inline-flex items-center gap-1.5 font-semibold text-brandCream">
+          <i class="fa-solid fa-location-dot text-brandRed"></i>
+          Street # 9, Canal Town, University of Peshawar
+        </span>
+        <span class="hidden md:inline text-white/20">|</span>
+        <span class="hidden md:inline-flex items-center gap-1.5 text-brandGold font-semibold">
+          <i class="fa-solid fa-clock"></i> Open Daily: 12:00 PM – 4:00 AM
+        </span>
+      </div>
+      <div class="flex items-center gap-4 ml-auto">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-brandRed/20 border border-brandRed/40 text-brandCream font-bold">
+          <i class="fa-solid fa-motorcycle text-brandGold"></i> Free Home Delivery
+        </span>
+        <a href="tel:03190192390" class="hover:text-brandGold font-bold text-brandCream transition hidden sm:inline">
+          <i class="fa-brands fa-whatsapp text-emerald-400 mr-1"></i>0319-0192390
+        </a>
+        <a href="tel:0915700557" class="hover:text-brandGold font-bold text-gray-300 transition hidden lg:inline">
+          <i class="fa-solid fa-phone text-brandRed mr-1"></i>091-5700557
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       A. STICKY RESPONSIVE NAVIGATION BAR WITH AUTHENTIC SHANZAI SVG EMBLEM
+       ========================================================================== -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo: Authentic Circular Shanzai پخلنځي Emblem -->
+      <a href="#home" class="flex items-center gap-3.5 group focus:outline-none">
+        <!-- Custom SVG Recreation of the Circular Dark Badge from the Printed Menu & Pizza Box -->
+        <div class="w-13 h-13 sm:w-14 sm:h-14 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+          <svg viewBox="0 0 120 120" class="w-13 h-13 sm:w-14 sm:h-14 drop-shadow-lg" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer Dark Navy/Charcoal Circle -->
+            <circle cx="60" cy="60" r="57" fill="#0f141c" stroke="#334155" stroke-width="2.5"/>
+            <!-- Inner Crimson & Silver Double Ring -->
+            <circle cx="60" cy="60" r="49" fill="#131924" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="6 3"/>
+            <circle cx="60" cy="60" r="44" fill="none" stroke="#94a3b8" stroke-width="1"/>
+            <!-- Roaring Flame at Top -->
+            <path d="M60 12 C53 22, 46 28, 50 38 C46 34, 43 29, 44 24 C38 32, 39 43, 48 48 C44 42, 48 35, 54 32 C52 38, 55 44, 60 47 C66 44, 69 37, 66 30 C70 35, 73 41, 70 48 C79 44, 81 33, 75 24 C75 30, 72 34, 69 36 C73 27, 67 20, 60 12 Z" fill="url(#flameGrad)"/>
+            <!-- Golden Burger & Pizza Slices Motif inside Emblem -->
+            <path d="M40 53 Q60 43 80 53 Z" fill="#f59e0b" />
+            <rect x="38" y="71" width="44" height="5" rx="2.5" fill="#eab308" />
+            <!-- Ribbon Banner Across Center -->
+            <rect x="20" y="54" width="80" height="17" rx="4" fill="#dc2626" stroke="#facc15" stroke-width="1.2"/>
+            <text x="60" y="66" text-anchor="middle" fill="#ffffff" font-family="Oswald, sans-serif" font-weight="700" font-size="12.5" letter-spacing="1.5">SHANZAI</text>
+            <!-- Bottom Sub-Label -->
+            <text x="60" y="88" text-anchor="middle" fill="#e2e8f0" font-family="Oswald, sans-serif" font-weight="600" font-size="7.5" letter-spacing="1.8">FAST FOOD</text>
+            <path d="M43 94 L77 94" stroke="#dc2626" stroke-width="1.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="flameGrad" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0%" stop-color="#dc2626"/>
+                <stop offset="60%" stop-color="#f97316"/>
+                <stop offset="100%" stop-color="#facc15"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="flex flex-col">
+          <div class="flex items-baseline gap-2">
+            <span class="shanzai-serif text-2xl sm:text-3xl font-extrabold text-brandRed tracking-wide leading-none drop-shadow">
+              Shanzai
+            </span>
+            <span class="pashto-logo-text text-xl sm:text-2xl font-extrabold leading-none" dir="rtl">
+              پخلنځي
+            </span>
+          </div>
+          <span class="text-[11px] text-gray-300 font-medium tracking-wide mt-0.5 flex items-center gap-1.5">
+            <span class="font-cursive text-brandGold text-sm">Fast Food Restaurant</span>
+            <span class="text-white/20">•</span>
+            <span class="text-[10px] uppercase tracking-wider text-gray-400 hidden sm:inline">Canal Town, Peshawar</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-brandCream/85">
+        <a href="#home" class="hover:text-brandGold transition-colors py-2">Home</a>
+        <a href="#categories" class="hover:text-brandGold transition-colors py-2">Categories</a>
+        <a href="#menu" class="hover:text-brandGold transition-colors py-2">Menu Card</a>
+        <a href="#featured" class="hover:text-brandGold transition-colors py-2">Best Sellers</a>
+        <a href="#gallery" class="hover:text-brandGold transition-colors py-2">Inside Shanzai</a>
+        <a href="#contact" class="hover:text-brandGold transition-colors py-2">Canal Town Map</a>
+      </nav>
+
+      <!-- Right Action Buttons -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <!-- Cart Trigger Button -->
+        <button onclick="toggleCartDrawer(true)" class="relative flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-charcoal-800 hover:bg-charcoal-700 border border-white/10 text-brandCream transition" aria-label="View Shopping Cart">
+          <i class="fa-solid fa-bag-shopping text-brandGold"></i>
+          <span class="hidden sm:inline text-xs font-bold">Order Bag</span>
+          <span id="navCartCount" class="min-w-[20px] h-[20px] px-1.5 rounded-full bg-brandRed text-white text-[11px] font-bold flex items-center justify-center">
+            0
+          </span>
+        </button>
+
+        <!-- Primary Order Now CTA -->
+        <a href="#menu" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brandRed hover:bg-brandRed-dark text-white font-bold text-xs sm:text-sm shadow-lg shadow-brandRed/25 transition">
+          <span>Order Now</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button onclick="toggleMobileMenu()" id="mobileMenuBtn" class="lg:hidden w-11 h-11 rounded-xl bg-charcoal-800 border border-white/10 flex items-center justify-center text-brandCream hover:text-brandRed transition" aria-label="Toggle Menu">
+          <i id="mobileMenuIcon" class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Clean Mobile Navigation Drawer -->
+    <div id="mobileNavDrawer" class="lg:hidden hidden bg-charcoal-900 border-b border-white/10 px-4 pt-3 pb-5 space-y-2">
+      <div class="grid grid-cols-2 gap-2">
+        <a href="#home" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-xl bg-charcoal-800/80 text-sm font-medium flex items-center gap-2.5">
+          <i class="fa-solid fa-house text-brandRed text-xs"></i> Home
+        </a>
+        <a href="#categories" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-xl bg-charcoal-800/80 text-sm font-medium flex items-center gap-2.5">
+          <i class="fa-solid fa-layer-group text-brandGold text-xs"></i> Categories
+        </a>
+        <a href="#menu" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-xl bg-charcoal-800/80 text-sm font-medium flex items-center gap-2.5">
+          <i class="fa-solid fa-book-open text-brandRed text-xs"></i> Menu Card
+        </a>
+        <a href="#featured" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-xl bg-charcoal-800/80 text-sm font-medium flex items-center gap-2.5">
+          <i class="fa-solid fa-star text-brandGold text-xs"></i> Best Sellers
+        </a>
+        <a href="#gallery" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-xl bg-charcoal-800/80 text-sm font-medium flex items-center gap-2.5">
+          <i class="fa-solid fa-camera text-brandRed text-xs"></i> Inside Shanzai
+        </a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="px-4 py-3 rounded-xl bg-charcoal-800/80 text-sm font-medium flex items-center gap-2.5">
+          <i class="fa-solid fa-location-dot text-brandGold text-xs"></i> Location
+        </a>
+      </div>
+      <div class="pt-2 flex gap-2">
+        <a href="tel:03190192390" class="flex-1 py-3 rounded-xl bg-charcoal-800 border border-white/10 text-brandGold font-bold text-center text-xs flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-phone"></i> 0319-0192390
+        </a>
+        <a href="#menu" onclick="toggleMobileMenu()" class="flex-1 py-3 rounded-xl bg-brandRed text-white font-bold text-center text-xs">
+          Explore Full Menu
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       B. HERO SECTION (FEATURING EXACT MOTTO, RATING & REAL MENU ITEMS)
+       ========================================================================== -->
+  <section id="home" class="relative overflow-hidden py-12 lg:py-20 border-b border-white/5">
+    <div class="hero-glow top-0 left-10"></div>
+    <div class="hero-glow bottom-0 right-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Left Column -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Rating & Google Maps Recognition Pill -->
+          <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2.5 px-4 py-1.5 rounded-full bg-charcoal-800/90 border border-white/10 text-xs font-semibold text-brandCream">
+            <span class="flex items-center gap-1 text-brandGold font-bold">
+              <i class="fa-solid fa-star"></i> 4.8 (305+ Reviews)
+            </span>
+            <span class="text-white/20">•</span>
+            <span class="text-gray-300">Rated <strong class="text-brandCream">#2 Best Pizza</strong> in Peshawar</span>
+            <span class="text-brandGold pashto-logo-text text-sm" dir="rtl">• شانزئی پخلنځی</span>
+          </div>
+
+          <div class="space-y-2">
+            <p class="shanzai-serif text-xl sm:text-2xl text-brandRed font-bold tracking-wide">
+              “Flavors of love, honesty and hygiene”
+            </p>
+            <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold uppercase tracking-tight leading-[1.05] text-brandCream">
+              Fresh Taste, <br class="hidden sm:inline" />
+              <span class="text-brandRed">Unforgettable</span> <span class="text-brandGold">Flavors</span>
+            </h1>
+          </div>
+
+          <p class="text-gray-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Welcome to <strong class="text-brandCream">Shanzai <span class="pashto-logo-text text-lg">پخلنځي</span> Fast Food Restaurant</strong> at Street # 9, Canal Town (near University of Peshawar). Serving our famous <span class="text-brandGold font-semibold">Crown Crust &amp; Shanzai Special Pizzas</span>, black-sesame artisan bun burgers, zinger shawarmas, and sizzling pizza fries until 4:00 AM.
+          </p>
+
+          <!-- Dual CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-1">
+            <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brandRed hover:bg-brandRed-dark text-white font-bold text-base shadow-lg shadow-brandRed/25 flex items-center justify-center gap-2.5 transition">
+              <span>Explore Our Menu</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <button onclick="openPrintedMenuView()" class="w-full sm:w-auto px-7 py-4 rounded-xl bg-charcoal-800 hover:bg-charcoal-700 text-brandCream border border-brandGold/40 font-bold text-base flex items-center justify-center gap-2.5 transition">
+              <i class="fa-solid fa-book-open text-brandGold"></i>
+              <span>View Printed Menu Card</span>
+            </button>
+          </div>
+
+          <!-- Key Restaurant Highlights from Menu Card -->
+          <div class="pt-5 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 border-t border-white/10 text-left">
+            <div>
+              <span class="font-display text-xl sm:text-2xl font-bold text-brandGold block">Rs. 180 – 1550</span>
+              <span class="text-xs text-gray-400">Authentic Menu Prices</span>
+            </div>
+            <div>
+              <span class="font-display text-xl sm:text-2xl font-bold text-brandCream block">12 PM – 4 AM</span>
+              <span class="text-xs text-gray-400">Late Night Cravings</span>
+            </div>
+            <div>
+              <span class="font-display text-xl sm:text-2xl font-bold text-brandRed block">Free Delivery</span>
+              <span class="text-xs text-gray-400">Canal Town &amp; UOP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Showcase of Shanzai's Signature Pizza & Black-Sesame Burger -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Main Card: Shanzai Special Pizza in Box -->
+            <div class="rounded-3xl overflow-hidden border border-white/15 shadow-2xl bg-charcoal-800 relative aspect-[4/4]">
+              <img
+                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=85"
+                alt="Shanzai Special Cheesy Pizza with Black Olives & Peppers"
+                onerror="handleImageFallback(this, 'Shanzai Special Pizza')"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/30 to-transparent"></div>
+
+              <!-- Top Badge matching the Neon Wall Sign in Restaurant Photo -->
+              <div class="absolute top-4 left-4 px-3.5 py-1.5 rounded-xl bg-charcoal-950/90 backdrop-blur-md border border-white/15 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brandGold animate-ping"></span>
+                <span class="neon-pashto-yellow text-sm font-bold" dir="rtl">شانزئی</span>
+                <span class="neon-pashto-red text-sm font-bold" dir="rtl">پخلنځی</span>
+                <span class="text-[10px] text-gray-300 uppercase tracking-wider font-semibold ml-1">Canal Town</span>
+              </div>
+
+              <!-- Bottom Dish Overlay -->
+              <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-2">
+                <div>
+                  <span class="px-2.5 py-1 rounded-md bg-brandRed text-white text-[10px] font-bold uppercase tracking-wider">
+                    #2 Rated Pizza in Peshawar
+                  </span>
+                  <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mt-1.5">
+                    Shanzai Special Pizza
+                  </h2>
+                  <p class="text-xs text-gray-300">Loaded Mozzarella, Black Olives, Chicken &amp; Bell Peppers</p>
+                </div>
+                <div class="text-right bg-charcoal-950/90 px-3.5 py-2 rounded-xl border border-brandGold/30">
+                  <span class="text-[10px] text-gray-400 block uppercase">S / M / L</span>
+                  <span class="font-display text-lg sm:text-xl font-bold text-brandGold">Rs. 550+</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Secondary Floating Card: Signature Black-Sesame Bun Burger -->
+            <div class="hidden sm:flex items-center gap-3.5 p-3 rounded-2xl bg-charcoal-900/95 backdrop-blur-md border border-white/15 shadow-2xl absolute -bottom-6 -left-6 max-w-xs">
+              <img
+                src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=300&q=80"
+                alt="Shanzai Special Burger with Black Sesame Seeds"
+                onerror="handleImageFallback(this, 'Shanzai Burger')"
+                class="w-16 h-16 rounded-xl object-cover flex-shrink-0 border border-white/10"
+              />
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-brandGold">House Specialty</span>
+                <p class="text-sm font-bold text-brandCream leading-tight">Shanzai Special Burger</p>
+                <span class="text-xs font-extrabold text-brandRed">Rs. 500</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       C. POPULAR CATEGORIES (MATCHING PRINTED MENU & BOX CATEGORIES)
+       ========================================================================== -->
+  <section id="categories" class="py-14 lg:py-18 bg-charcoal-900/50 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-9 gap-4">
+        <div>
+          <span class="text-brandGold font-semibold text-xs uppercase tracking-[0.2em] block mb-1.5">
+            Explore Our Kitchen
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold uppercase text-brandCream">
+            Menu <span class="text-brandRed">Categories</span>
+          </h2>
+        </div>
+        <p class="text-gray-400 text-sm max-w-md">
+          Tap any category below to jump straight to those items on the Shanzai <span class="pashto-logo-text text-sm">پخلنځي</span> menu.
+        </p>
+      </div>
+
+      <!-- Categories Grid -->
+      <div id="categoriesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Populated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       D. COMPLETE SHANZAI پخلنځي MENU (CARDS + PRINTED MENU CARD VIEW TOGGLE)
+       ========================================================================== -->
+  <section id="menu" class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading & View Mode Switcher -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-6">
+        <div>
+          <span class="text-brandRed font-bold text-xs uppercase tracking-[0.2em] block mb-1.5">
+            “Flavors of love, honesty and hygiene”
+          </span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-brandCream">
+            Shanzai <span class="pashto-logo-text text-3xl sm:text-4xl">پخلنځي</span> <span class="text-brandGold">Official Menu</span>
+          </h2>
+          <p class="text-gray-400 text-sm mt-2">
+            Exact food items and PKR (Rs.) prices from our Canal Town Peshawar printed menu card.
+          </p>
+        </div>
+
+        <!-- View Switcher: Interactive Cards vs. Printed Menu Card -->
+        <div class="inline-flex p-1.5 rounded-2xl bg-charcoal-900 border border-white/10 self-start lg:self-auto">
+          <button
+            id="btnCardView"
+            onclick="switchMenuViewMode('cards')"
+            class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 bg-brandRed text-white shadow transition"
+          >
+            <i class="fa-solid fa-grip"></i>
+            <span>Interactive Order Cards</span>
+          </button>
+          <button
+            id="btnPrintedView"
+            onclick="switchMenuViewMode('printed')"
+            class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 text-gray-300 hover:text-white transition"
+          >
+            <i class="fa-solid fa-file-invoice"></i>
+            <span>Printed Menu Card View</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE CARDS VIEW -->
+      <div id="interactiveMenuViewWrapper">
+        <!-- Sticky Filter & Search Bar -->
+        <div class="sticky top-20 z-30 bg-charcoal-950/95 backdrop-blur-md py-3.5 px-4 rounded-2xl border border-white/10 mb-10">
+          <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3">
+            
+            <!-- Category Filter Pills -->
+            <div id="categoryFilterTabs" class="flex items-center gap-2 overflow-x-auto no-scrollbar">
+              <!-- Populated via JS -->
+            </div>
+
+            <!-- Instant Search Input -->
+            <div class="relative min-w-[240px] sm:min-w-[280px]">
+              <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+              <input
+                type="text"
+                id="menuSearchInput"
+                oninput="handleMenuSearch(this.value)"
+                placeholder="Search burgers, pizzas, shawarma..."
+                class="w-full pl-9 pr-8 py-2 rounded-xl bg-charcoal-800 border border-white/10 text-xs sm:text-sm text-brandCream placeholder-gray-400 focus:outline-none focus:border-brandRed transition"
+              />
+              <button
+                id="clearSearchBtn"
+                onclick="clearMenuSearch()"
+                class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white text-xs"
+                aria-label="Clear search"
+              >
+                <i class="fa-solid fa-circle-xmark"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Menu Category Sections -->
+        <div id="menuSectionsContainer" class="space-y-14">
+          <!-- Populated via JS -->
+        </div>
+
+        <!-- Empty Search State -->
+        <div id="menuEmptyState" class="hidden text-center py-14 px-4 rounded-2xl bg-charcoal-900 border border-white/10 max-w-md mx-auto">
+          <p class="text-brandCream font-semibold text-base mb-1">No matching items found</p>
+          <p class="text-gray-400 text-xs mb-5">Try another keyword or view all categories.</p>
+          <button onclick="resetMenuFilters()" class="px-5 py-2 rounded-xl bg-brandRed text-white font-semibold text-xs hover:bg-brandRed-dark transition">
+            Show Full Menu
+          </button>
+        </div>
+      </div>
+
+      <!-- AUTHENTIC PRINTED MENU CARD REPLICA VIEW (FROM ATTACHED PHOTO 1) -->
+      <div id="printedMenuViewWrapper" class="hidden">
+        <div class="printed-menu-card rounded-3xl p-6 sm:p-10 lg:p-12 border-4 border-charcoal-800 relative overflow-hidden">
+          
+          <div class="text-center mb-6">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-800 text-amber-300 text-xs font-bold uppercase tracking-wider">
+              <i class="fa-solid fa-hand-pointer"></i> Tap any item row below to add it directly to your Order Bag
+            </span>
+          </div>
+
+          <!-- 3-Column Printed Menu Layout exactly like the physical Shanzai Menu Card -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- LEFT COLUMN: BURGERS & ROLLS/SHAWARMA -->
+            <div class="lg:col-span-4 space-y-8">
+              <!-- Burgers Brush Header -->
+              <div>
+                <div class="brush-banner py-2 px-6 mb-4 text-center">
+                  <h3 class="font-cursive text-2xl font-bold tracking-wide text-white">Burgers</h3>
+                </div>
+                <div id="printedBurgersList" class="space-y-2 text-sm">
+                  <!-- Populated via JS -->
+                </div>
+              </div>
+
+              <!-- Rolls & Shawarma Brush Header -->
+              <div>
+                <div class="brush-banner py-2 px-6 mb-4 text-center">
+                  <h3 class="font-cursive text-2xl font-bold tracking-wide text-white">Rolls &amp; Shawarma</h3>
+                </div>
+                <div id="printedRollsList" class="space-y-2 text-sm">
+                  <!-- Populated via JS -->
+                </div>
+              </div>
+            </div>
+
+            <!-- CENTER COLUMN: SHANZAI EMBLEM, MOTTO & CONTACTS -->
+            <div class="lg:col-span-4 flex flex-col items-center text-center justify-between py-4 px-2 space-y-6 border-y lg:border-y-0 lg:border-x border-stone-300/80">
+              
+              <!-- Circular Logo Emblem -->
+              <div class="w-36 h-36">
+                <svg viewBox="0 0 120 120" class="w-full h-full drop-shadow-xl" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="60" cy="60" r="57" fill="#0f141c" stroke="#1e293b" stroke-width="3"/>
+                  <circle cx="60" cy="60" r="49" fill="#131924" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 3"/>
+                  <circle cx="60" cy="60" r="44" fill="none" stroke="#94a3b8" stroke-width="1"/>
+                  <path d="M60 12 C53 22, 46 28, 50 38 C46 34, 43 29, 44 24 C38 32, 39 43, 48 48 C44 42, 48 35, 54 32 C52 38, 55 44, 60 47 C66 44, 69 37, 66 30 C70 35, 73 41, 70 48 C79 44, 81 33, 75 24 C75 30, 72 34, 69 36 C73 27, 67 20, 60 12 Z" fill="url(#flameGrad)"/>
+                  <path d="M40 53 Q60 43 80 53 Z" fill="#f59e0b" />
+                  <rect x="38" y="71" width="44" height="5" rx="2.5" fill="#eab308" />
+                  <rect x="20" y="54" width="80" height="17" rx="4" fill="#dc2626" stroke="#facc15" stroke-width="1.2"/>
+                  <text x="60" y="66" text-anchor="middle" fill="#ffffff" font-family="Oswald, sans-serif" font-weight="700" font-size="12.5" letter-spacing="1.5">SHANZAI</text>
+                  <text x="60" y="88" text-anchor="middle" fill="#e2e8f0" font-family="Oswald, sans-serif" font-weight="600" font-size="7.5" letter-spacing="1.8">FAST FOOD</text>
+                  <path d="M43 94 L77 94" stroke="#dc2626" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+
+              <!-- Shanzai پخلنځي Title & Tagline -->
+              <div class="space-y-2">
+                <h3 class="shanzai-serif text-5xl font-extrabold text-brandRed tracking-wide">
+                  Shanzai
+                </h3>
+                <div class="pashto-logo-text text-4xl font-extrabold py-1" dir="rtl">
+                  پخلنځي
+                </div>
+                <p class="font-cursive text-2xl text-stone-800 pt-1">
+                  Fast Food Restaurant
+                </p>
+                <p class="shanzai-serif text-lg sm:text-xl text-brandRed font-bold pt-2 leading-snug">
+                  “Flavors of love,<br/>honesty and hygiene”
+                </p>
+              </div>
+
+              <!-- Dark Footer Contact Card inside Printed Menu -->
+              <div class="w-full rounded-2xl bg-stone-800 text-stone-100 p-5 text-left space-y-2.5 shadow-inner">
+                <div class="flex items-center justify-between border-b border-stone-600 pb-2.5">
+                  <div class="space-y-1 text-xs">
+                    <p class="flex items-center gap-2 font-bold text-emerald-400">
+                      <i class="fa-brands fa-whatsapp text-sm"></i> 0319-0192390
+                    </p>
+                    <p class="flex items-center gap-2 font-bold text-amber-300">
+                      <i class="fa-solid fa-phone text-xs"></i> 091-5700557
+                    </p>
+                  </div>
+                  <div class="px-3 py-1.5 rounded-xl bg-brandRed text-white text-[11px] font-extrabold uppercase tracking-wider flex items-center gap-1.5">
+                    <i class="fa-solid fa-motorcycle text-brandGold"></i> Free Delivery
+                  </div>
+                </div>
+                <div class="text-[11px] space-y-1 text-stone-300">
+                  <p><i class="fa-brands fa-facebook text-blue-400 w-4"></i> Shanzai پخلنځي</p>
+                  <p><i class="fa-brands fa-instagram text-pink-400 w-4"></i> shanzai_pakhlanzai &nbsp;|&nbsp; <i class="fa-brands fa-tiktok text-white"></i> Shanzai پخلنځي</p>
+                  <p class="text-amber-300 font-semibold pt-1">
+                    <i class="fa-solid fa-location-dot text-brandRed w-4"></i> Canal Town Street # 9, University of Peshawar
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: PIZZA'S, FRIES & DRINKS -->
+            <div class="lg:col-span-4 space-y-8">
+              <!-- Pizza's Brush Header -->
+              <div>
+                <div class="brush-banner py-2 px-6 mb-3 text-center">
+                  <h3 class="font-cursive text-2xl font-bold tracking-wide text-white">Pizza's</h3>
+                </div>
+                <div class="grid grid-cols-12 text-xs font-extrabold text-stone-700 border-b border-stone-400 pb-1 mb-2 px-2">
+                  <span class="col-span-6">FLAVOR</span>
+                  <span class="col-span-2 text-center">S</span>
+                  <span class="col-span-2 text-center">M</span>
+                  <span class="col-span-2 text-right">L</span>
+                </div>
+                <div id="printedPizzasList" class="space-y-2 text-sm">
+                  <!-- Populated via JS -->
+                </div>
+              </div>
+
+              <!-- Fries Brush Header -->
+              <div>
+                <div class="brush-banner py-2 px-6 mb-4 text-center">
+                  <h3 class="font-cursive text-2xl font-bold tracking-wide text-white">Fries</h3>
+                </div>
+                <div id="printedFriesList" class="space-y-2 text-sm">
+                  <!-- Populated via JS -->
+                </div>
+              </div>
+
+              <!-- Drinks Brush Header -->
+              <div>
+                <div class="brush-banner py-2 px-6 mb-4 text-center">
+                  <h3 class="font-cursive text-2xl font-bold tracking-wide text-white">Drinks</h3>
+                </div>
+                <div id="printedDrinksList" class="space-y-2 text-sm">
+                  <!-- Populated via JS -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       E. FEATURED / BEST SELLERS SECTION
+       ========================================================================== -->
+  <section id="featured" class="py-16 lg:py-20 bg-charcoal-900/70 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-brandGold font-semibold text-xs uppercase tracking-[0.2em] block mb-1.5">
+            Canal Town Favorites
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold uppercase text-brandCream">
+            Shanzai <span class="text-brandRed">Best Sellers</span>
+          </h2>
+        </div>
+        <p class="text-gray-400 text-sm max-w-md">
+          Our highest-rated items on Google Maps across University of Peshawar &amp; Canal Town.
+        </p>
+      </div>
+
+      <!-- Featured Grid -->
+      <div id="featuredGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Populated via JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       F. INSIDE SHANZAI پخلنځي (REAL VISUAL ATMOSPHERE & GALLERY)
+       ========================================================================== -->
+  <section id="gallery" class="py-16 lg:py-24 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-brandRed font-bold text-xs uppercase tracking-[0.2em] block mb-1.5">
+            Authentic Visuals &amp; Vibe
+          </span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase text-brandCream">
+            Inside <span class="shanzai-serif text-brandRed">Shanzai</span> <span class="pashto-logo-text text-3xl sm:text-4xl">پخلنځي</span>
+          </h2>
+        </div>
+        <p class="text-gray-400 text-sm max-w-md">
+          From our black-brick dining room with glowing <span class="text-brandGold font-semibold">شانزئی پخلنځی</span> neon signage and red chairs to our fresh oven-baked pizzas and black-sesame burgers.
+        </p>
+      </div>
+
+      <!-- 3-Card Real Vibe Showcase matching the 3 attached photos -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Card 1: Fresh Olive & Pepper Pizza in Custom Shanzai Box -->
+        <div class="premium-card overflow-hidden group flex flex-col justify-between">
+          <div class="img-zoom-wrap h-64 relative">
+            <img
+              src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=85"
+              alt="Fresh Shanzai Pizza in Navy & Red Box"
+              onerror="handleImageFallback(this, 'Shanzai Box Pizza')"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-transparent to-transparent"></div>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-brandRed text-white text-[11px] font-bold uppercase">
+              Fresh Out of the Oven
+            </span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold uppercase text-brandCream">
+              Signature Box Pizzas (S / M / L)
+            </h3>
+            <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+              Served piping hot in our dark navy &amp; crimson Shanzai pizza boxes with full menu print inside—topped with thick mozzarella, sliced black olives, green peppers, and tender chicken chunks.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Black-Brick Interior with Glowing Neon شانزئی پخلنځی Wall & Black-Sesame Bun -->
+        <div class="premium-card overflow-hidden group flex flex-col justify-between border-brandGold/30">
+          <div class="img-zoom-wrap h-64 relative bg-black">
+            <img
+              src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=85"
+              alt="Shanzai Black Sesame Burger & Neon Dining Room"
+              onerror="handleImageFallback(this, 'Shanzai Dining Vibe')"
+              class="w-full h-full object-cover opacity-85"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/40 to-transparent"></div>
+            <!-- Recreation of the Neon Wall Sign from Photo 3 -->
+            <div class="absolute top-4 right-4 px-4 py-2 rounded-2xl bg-black/85 border border-white/15 text-right shadow-2xl">
+              <span class="neon-pashto-yellow text-xl font-extrabold block leading-none" dir="rtl">شانزئی</span>
+              <span class="neon-pashto-red text-lg font-extrabold block leading-tight mt-1" dir="rtl">پخلنځی</span>
+            </div>
+            <span class="absolute bottom-3 left-4 px-2.5 py-1 rounded bg-brandGold text-charcoal-950 text-[10px] font-extrabold uppercase">
+              Dine-In Atmosphere
+            </span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold uppercase text-brandCream">
+              Black-Sesame Burgers &amp; Neon Lounge
+            </h3>
+            <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+              Enjoy our house-baked artisan buns topped with black sesame seeds inside our vibrant black-wall dining room featuring warm pendant lights, red seating, and glowing Pashto neon art.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3: Honesty, Hygiene & Free Canal Town Delivery -->
+        <div class="premium-card overflow-hidden group flex flex-col justify-between">
+          <div class="img-zoom-wrap h-64 relative">
+            <img
+              src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=900&q=85"
+              alt="Zinger Burgers, Rolls & Loaded Fries"
+              onerror="handleImageFallback(this, 'Shanzai Fast Food')"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-transparent to-transparent"></div>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-emerald-600 text-white text-[11px] font-bold uppercase">
+              100% Halal &amp; Hygienic
+            </span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold uppercase text-brandCream">
+              “Flavors of Love, Honesty &amp; Hygiene”
+            </h3>
+            <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+              True to our printed menu motto, every burger, zinger paratha roll, platter shawarma, and family pizza fries tray is prepared fresh to order with free home delivery in Canal Town.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       G. CONTACT & REAL CANAL TOWN PESHAWAR LOCATION (34.0068148, 71.4729641)
+       ========================================================================== -->
+  <section id="contact" class="py-16 lg:py-24 bg-charcoal-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-brandGold font-semibold text-xs uppercase tracking-[0.2em] block mb-1.5">
+            Visit Or Order Free Delivery
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold uppercase text-brandCream">
+            Canal Town <span class="text-brandRed">Location &amp; Contacts</span>
+          </h2>
+        </div>
+        <p class="text-gray-400 text-sm max-w-md">
+          Located at Street # 9, Canal Town, near University of Peshawar. Open every day from 12:00 PM to 4:00 AM.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Left Authentic Contact Cards -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+          
+          <!-- Address Card -->
+          <div class="p-5 rounded-2xl bg-charcoal-800 border border-white/10 flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl bg-brandRed/15 text-brandRed flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-location-dot text-lg"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-semibold uppercase tracking-wider text-gray-400">Official Address</span>
+              <h3 class="font-display text-lg font-bold text-brandCream mt-0.5">Street # 9, Canal Town, Peshawar</h3>
+              <p class="text-xs text-gray-400 mt-0.5">Near University of Peshawar, Khyber Pakhtunkhwa (2F4F+P5 Peshawar)</p>
+            </div>
+          </div>
+
+          <!-- Official Numbers from Menu Card -->
+          <div class="p-5 rounded-2xl bg-charcoal-800 border border-white/10 flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl bg-brandGold/15 text-brandGold flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-phone-volume text-lg"></i>
+            </div>
+            <div class="flex-1">
+              <span class="text-[11px] font-semibold uppercase tracking-wider text-gray-400">Free Home Delivery Numbers</span>
+              <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1">
+                <a href="tel:03190192390" class="font-display text-lg font-bold text-brandCream hover:text-brandGold transition">
+                  <i class="fa-brands fa-whatsapp text-emerald-400 mr-1"></i>0319-0192390
+                </a>
+                <a href="tel:0915700557" class="font-display text-lg font-bold text-brandGold hover:underline">
+                  <i class="fa-solid fa-phone text-brandRed mr-1 text-sm"></i>091-5700557
+                </a>
+              </div>
+              <p class="text-xs text-gray-400 mt-1">Fast free home delivery across Canal Town, University Town &amp; UOP Campus</p>
+            </div>
+          </div>
+
+          <!-- Hours & Social Handles -->
+          <div class="p-5 rounded-2xl bg-charcoal-800 border border-white/10 flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-clock text-lg"></i>
+            </div>
+            <div class="w-full">
+              <span class="text-[11px] font-semibold uppercase tracking-wider text-gray-400">Hours &amp; Social Media</span>
+              <p class="text-sm font-bold text-brandCream mt-0.5">Monday – Sunday: 12:00 PM – 04:00 AM</p>
+              <div class="flex flex-wrap items-center gap-3 mt-2 text-xs text-gray-300">
+                <span><i class="fa-brands fa-facebook text-blue-400 mr-1"></i>Shanzai پخلنځي</span>
+                <span><i class="fa-brands fa-instagram text-pink-400 mr-1"></i>@shanzai_pakhlanzai</span>
+                <span><i class="fa-brands fa-tiktok text-white mr-1"></i>Shanzai پخلنځي</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct WhatsApp Order Button -->
+          <a
+            href="https://wa.me/923190192390?text=Salam%20Shanzai%20%D9%BE%D8%AE%D9%84%D9%86%DA%81%D9%8A!%20I%20would%20like%20to%20place%20an%20order%20for%20Canal%20Town%20Peshawar."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full py-4 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm flex items-center justify-center gap-2.5 shadow-lg shadow-emerald-600/20 transition"
+          >
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span>Order on Official WhatsApp (0319-0192390)</span>
+          </a>
+        </div>
+
+        <!-- Right Exact Coordinates Google Map Embed (34.0068148, 71.4729641) -->
+        <div class="lg:col-span-7">
+          <div class="h-full min-h-[360px] rounded-2xl bg-charcoal-800 border border-white/10 overflow-hidden relative flex flex-col">
+            <iframe
+              title="Shanzai پخلنځي Canal Town Peshawar Map"
+              src="https://www.google.com/maps?q=34.0068148,71.4729641&hl=en&z=16&output=embed"
+              class="w-full flex-1 border-0 dark-map-iframe min-h-[320px]"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="p-4 bg-charcoal-900 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 text-xs">
+              <span class="text-brandCream font-semibold">
+                <i class="fa-solid fa-map-pin text-brandRed mr-1.5"></i> Shanzai <span class="pashto-logo-text text-sm">پخلنځي</span> — Street # 9, Canal Town, University of Peshawar
+              </span>
+              <a
+                href="https://www.google.com/maps/place/Shanzai+%D9%BE%D8%AE%D9%84%D9%86%DA%81%D9%8A%E2%80%AD/@34.0068148,71.4729641,16z"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-brandGold hover:underline font-bold flex items-center gap-1.5"
+              >
+                <span>Open in Google Maps</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       H. FOOTER
+       ========================================================================== -->
+  <footer class="bg-charcoal-950 border-t border-white/10 pt-14 pb-10 text-sm text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-white/10">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-5 space-y-3">
+          <a href="#home" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-charcoal-800 border border-brandRed flex items-center justify-center text-brandGold">
+              <i class="fa-solid fa-fire-flame-curved text-base"></i>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="shanzai-serif text-2xl font-extrabold text-brandRed">
+                Shanzai
+              </span>
+              <span class="pashto-logo-text text-xl font-extrabold" dir="rtl">
+                پخلنځي
+              </span>
+            </div>
+          </a>
+          <p class="shanzai-serif text-brandGold text-base">
+            “Flavors of love, honesty and hygiene”
+          </p>
+          <p class="text-gray-400 text-xs sm:text-sm max-w-sm leading-relaxed">
+            Canal Town Peshawar's favorite fast-food restaurant for Crown Crust Pizzas, Shanzai Special Burgers, Zinger Paratha Rolls, and Loaded Pizza Fries.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-3 space-y-2.5">
+          <h3 class="font-display text-sm font-bold uppercase tracking-wider text-brandCream">Quick Links</h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="#home" class="hover:text-brandGold transition">Home</a></li>
+            <li><a href="#menu" onclick="switchMenuViewMode('cards')" class="hover:text-brandGold transition">Interactive Menu</a></li>
+            <li><a href="#menu" onclick="openPrintedMenuView()" class="hover:text-brandGold transition">Printed Menu Card</a></li>
+            <li><a href="#featured" class="hover:text-brandGold transition">Best Sellers</a></li>
+            <li><a href="#gallery" class="hover:text-brandGold transition">Inside Shanzai</a></li>
+          </ul>
+        </div>
+
+        <!-- Official Canal Town Contact Summary -->
+        <div class="md:col-span-4 space-y-2.5">
+          <h3 class="font-display text-sm font-bold uppercase tracking-wider text-brandCream">Canal Town Branch</h3>
+          <p class="text-xs sm:text-sm text-gray-300">Street # 9, Canal Town, University of Peshawar</p>
+          <p class="text-xs sm:text-sm text-brandGold font-bold">
+            WhatsApp: 0319-0192390 &nbsp;|&nbsp; PTCL: 091-5700557
+          </p>
+          <p class="text-xs text-emerald-400 font-semibold">Open Daily: 12:00 PM – 4:00 AM (Free Delivery)</p>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+        <p>&copy; <span id="currentYear"></span> Shanzai پخلنځي Fast Food Restaurant (Peshawar). All rights reserved.</p>
+        <p>“Flavors of love, honesty and hygiene”</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       I. SLIDE-OVER SHOPPING CART DRAWER & WHATSAPP (0319-0192390) CHECKOUT
+       ========================================================================== -->
+  <div id="cartDrawerBackdrop" onclick="toggleCartDrawer(false)" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"></div>
+
+  <aside id="cartDrawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-charcoal-900 border-l border-white/10 z-50 transform translate-x-full transition-transform duration-300 flex flex-col shadow-2xl">
+    <!-- Cart Header -->
+    <div class="p-5 border-b border-white/10 flex items-center justify-between bg-charcoal-950">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-brandRed/20 text-brandRed flex items-center justify-center">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold uppercase text-brandCream">Your Shanzai Order</h3>
+          <p id="cartHeaderSubtext" class="text-xs text-gray-400">0 items • Free Delivery in Canal Town</p>
+        </div>
+      </div>
+      <button onclick="toggleCartDrawer(false)" class="w-8 h-8 rounded-lg bg-charcoal-800 text-gray-400 hover:text-white flex items-center justify-center transition" aria-label="Close Cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Cart Items Scroll List -->
+    <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-5 space-y-3">
+      <!-- Populated via JS -->
+    </div>
+
+    <!-- Cart Footer / Checkout Form -->
+    <div class="p-5 border-t border-white/10 bg-charcoal-950 space-y-3.5">
+      <div class="space-y-2">
+        <input
+          type="text"
+          id="customerNameInput"
+          placeholder="Your Name"
+          class="w-full px-3.5 py-2 rounded-xl bg-charcoal-800 border border-white/10 text-xs text-brandCream placeholder-gray-400 focus:outline-none focus:border-brandRed"
+        />
+        <input
+          type="text"
+          id="customerAddressInput"
+          placeholder="Delivery Address (e.g., Street # 9 Canal Town / Hostel / Table)"
+          class="w-full px-3.5 py-2 rounded-xl bg-charcoal-800 border border-white/10 text-xs text-brandCream placeholder-gray-400 focus:outline-none focus:border-brandRed"
+        />
+      </div>
+
+      <div class="flex items-center justify-between pt-2 border-t border-white/10">
+        <div>
+          <span class="text-xs text-gray-400 block">Total Payable (PKR)</span>
+          <span class="text-[10px] text-emerald-400 font-semibold">Free Home Delivery</span>
+        </div>
+        <span id="cartTotalText" class="font-display text-2xl font-bold text-brandGold">Rs. 0</span>
+      </div>
+
+      <div class="grid grid-cols-1 gap-2">
+        <button
+          onclick="checkoutViaWhatsApp()"
+          class="w-full py-3.5 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-600/20"
+        >
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Send Order to WhatsApp (0319-0192390)</span>
+        </button>
+        <button
+          onclick="placeInstantDemoOrder()"
+          class="w-full py-2.5 px-5 rounded-xl bg-brandRed hover:bg-brandRed-dark text-white font-semibold text-xs sm:text-sm transition"
+        >
+          Confirm Instant Order
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- ==========================================================================
+       JAVASCRIPT: AUTHENTIC SHANZAI MENU DATA, S/M/L PIZZA SELECTOR & CART
+       ========================================================================== -->
+  <script>
+    /**
+     * 1. AUTHENTIC SHANZAI پخلنځي CATEGORIES (FROM PRINTED MENU & BOX MENU)
+     */
+    const CATEGORIES_DATA = [
+      {
+        id: 'burgers',
+        name: 'Burgers',
+        tagline: 'Artisan black-sesame bun burgers: Shanzai Special, Mighty, Zinger, Chapli & Monster Grill.',
+        image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'pizzas',
+        name: "Pizza's",
+        tagline: 'Rated #2 in Peshawar! Shanzai Special, Crown Crust, Malai Boti & Creamy Melt in S / M / L.',
+        image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'rolls-shawarma',
+        name: 'Rolls & Shawarma',
+        tagline: 'Freshly wrapped Zinger Burger Shawarma, Paratha Rolls, Malai Rolls & Platter Shawarma.',
+        image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'fries',
+        name: 'Fries & Loaded Fries',
+        tagline: 'Small, Medium & Large crispy fries, cheesy Loaded Fries, and Family Pizza Fries.',
+        image: 'https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'appetizers',
+        name: 'Appetizers & Wings',
+        tagline: 'Crispy Hot Wings, Oven Baked Wings, Golden Nuggets & Cheesy Calzone Chunks.',
+        image: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'drinks',
+        name: 'Drinks',
+        tagline: 'Chilled Fresh Lime and signature blended Mint Margarita.',
+        image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=80'
+      }
+    ];
+
+    /**
+     * 2. AUTHENTIC SHANZAI پخلنځي MENU ITEMS & EXACT PKR PRICES
+     *    Pizzas include interactive `sizes: { S, M, L }` matching the printed menu columns.
+     */
+    const MENU_ITEMS = [
+      // ==================== BURGERS ====================
+      {
+        id: 'brg-1',
+        category: 'Burgers',
+        name: 'Crunchy Burger',
+        description: 'Crispy golden chicken fillet with fresh iceberg lettuce and signature Shanzai house mayo.',
+        price: 280,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'brg-2',
+        category: 'Burgers',
+        name: 'Zinger Burger',
+        description: 'Classic extra-crispy zinger thigh fillet served in a soft toasted bun with spicy zinger dressing.',
+        price: 350,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'brg-3',
+        category: 'Burgers',
+        name: 'Shanzai Special Burger',
+        description: 'Our signature black-sesame artisan bun stacked with crispy chicken, molten cheese slice, smoky sauce & fresh veggies.',
+        price: 500,
+        bestSeller: true,
+        image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'brg-4',
+        category: 'Burgers',
+        name: 'Jalapeno Burger',
+        description: 'Fiery pickled jalapeños, melted cheddar cheese, and tangy jalapeno sauce over a crunchy fillet.',
+        price: 450,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'brg-5',
+        category: 'Burgers',
+        name: 'Mighty Burger',
+        description: 'Double-stacked monster crunch with twin fillets, cheese slice, lettuce, and smoky chipotle mayo.',
+        price: 550,
+        bestSeller: true,
+        image: 'https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'brg-6',
+        category: 'Burgers',
+        name: 'Patty Burger',
+        description: 'Classic seasoned chicken patty topped with creamy coleslaw and house burger sauce.',
+        price: 250,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'brg-7',
+        category: 'Burgers',
+        name: 'Dbl. Patty Burger',
+        description: 'Twin seasoned patties layered with melted cheese, fresh onion rings, and signature sauce.',
+        price: 350,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'brg-8',
+        category: 'Burgers',
+        name: 'Chapli Burger',
+        description: 'Peshawar-style spiced chapli patty served in a toasted bun with mint chutney and crisp onions.',
+        price: 250,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'brg-9',
+        category: 'Burgers',
+        name: 'Grill Burger',
+        description: 'Flame-grilled marinated chicken fillet brushed with smoky BBQ herbs and garlic mayo.',
+        price: 400,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'brg-10',
+        category: 'Burgers',
+        name: 'Reggy Tikka Burger',
+        description: 'Chargrilled chicken tikka fillet infused with traditional spices and cool herb mayo.',
+        price: 280,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'brg-11',
+        category: 'Burgers',
+        name: 'Monster Grill Burger',
+        description: 'Heavyweight double flame-grilled fillets loaded with caramelized onions, cheese, and peri-peri glaze.',
+        price: 550,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=700&q=80'
+      },
+
+      // ==================== PIZZA'S (WITH S / M / L SIZES) ====================
+      {
+        id: 'piz-1',
+        category: "Pizza's",
+        name: 'Shanzai Special Pizza',
+        description: 'Our #1 house pizza loaded with rich mozzarella, tender chicken chunks, black olives, sweet corn & bell peppers.',
+        sizes: { S: 550, M: 1000, L: 1450 },
+        selectedSize: 'M',
+        price: 1000,
+        bestSeller: true,
+        image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'piz-2',
+        category: "Pizza's",
+        name: 'Crown Crust Pizza',
+        description: 'Voted #2 Best Pizza in Peshawar! Royal crown crust stuffed with kabab/cheese pockets and creamy sauce drizzle.',
+        sizes: { S: 600, M: 1100, L: 1550 },
+        selectedSize: 'M',
+        price: 1100,
+        bestSeller: true,
+        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'piz-3',
+        category: "Pizza's",
+        name: 'Chicken Tikka Pizza',
+        description: 'Traditional smoky chicken tikka chunks, red onions, green chilies, and bubbling mozzarella cheese.',
+        sizes: { S: 500, M: 950, L: 1350 },
+        selectedSize: 'M',
+        price: 950,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'piz-4',
+        category: "Pizza's",
+        name: 'Fajita Pizza',
+        description: 'Mexican-spiced chicken fajita strips, bell peppers, onions, black olives, and oregano.',
+        sizes: { S: 500, M: 950, L: 1350 },
+        selectedSize: 'M',
+        price: 950,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'piz-5',
+        category: "Pizza's",
+        name: 'Malai Boti Pizza',
+        description: 'Creamy charcoal-marinated chicken malai boti topped with rich white garlic sauce and mozzarella.',
+        sizes: { S: 550, M: 1000, L: 1450 },
+        selectedSize: 'M',
+        price: 1000,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'piz-6',
+        category: "Pizza's",
+        name: 'Supreme Pizza',
+        description: 'Fully loaded with spicy chicken, smoky sausages, mushrooms, olives, jalapeños, and extra cheese.',
+        sizes: { S: 550, M: 1000, L: 1450 },
+        selectedSize: 'M',
+        price: 1000,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'piz-7',
+        category: "Pizza's",
+        name: 'Creamy Melt Pizza',
+        description: 'Signature creamy white sauce base layered with tender chicken, sweet corn, olives, and double cheese.',
+        sizes: { S: 600, M: 1100, L: 1550 },
+        selectedSize: 'M',
+        price: 1100,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=700&q=80'
+      },
+
+      // ==================== ROLLS & SHAWARMA ====================
+      {
+        id: 'rol-1',
+        category: 'Rolls & Shawarma',
+        name: 'Zinger Burger Shawarma',
+        description: 'Crispy zinger strips wrapped in warm pita with garlic tahini sauce, pickles, and fries.',
+        price: 250,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'rol-2',
+        category: 'Rolls & Shawarma',
+        name: 'Zinger Shawarma',
+        description: 'Crunchy zinger chicken pieces rolled in toasted shawarma bread with spicy mayo and salad.',
+        price: 220,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'rol-3',
+        category: 'Rolls & Shawarma',
+        name: 'Zinger Paratha Roll',
+        description: 'Flaky golden fried paratha stuffed with crispy zinger strips, mint chutney, and garlic mayo.',
+        price: 250,
+        bestSeller: true,
+        image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'rol-4',
+        category: 'Rolls & Shawarma',
+        name: 'Chicken Malai Roll',
+        description: 'Creamy chargrilled malai boti wrapped in a flaky paratha with onions and signature white sauce.',
+        price: 250,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'rol-5',
+        category: 'Rolls & Shawarma',
+        name: 'Shanzai Platter Shawarma',
+        description: 'Full platter of sliced roasted & zinger chicken, pita bread, crispy fries, olives, and twin dips.',
+        price: 450,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'rol-6',
+        category: 'Rolls & Shawarma',
+        name: 'Arabic Shawarma',
+        description: 'Authentic Middle-Eastern style shawarma wrap with garlic toum, pickled cucumbers, and grilled chicken.',
+        price: 250,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'rol-7',
+        category: 'Rolls & Shawarma',
+        name: 'Chicken Shawarma',
+        description: 'Classic Peshawar pocket-friendly chicken shawarma with creamy garlic mayo and red chili sauce.',
+        price: 180,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=700&q=80'
+      },
+
+      // ==================== FRIES & LOADED FRIES ====================
+      {
+        id: 'frs-1',
+        category: 'Fries & Loaded Fries',
+        name: 'Small Fries',
+        description: 'Crispy golden salted or masala potato fries.',
+        price: 150,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'frs-2',
+        category: 'Fries & Loaded Fries',
+        name: 'Medium Fries',
+        description: 'Generous regular serving of freshly fried crispy golden potato fries.',
+        price: 250,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'frs-3',
+        category: 'Fries & Loaded Fries',
+        name: 'Large Fries',
+        description: 'Large sharing basket of hot crispy fries seasoned with house masala.',
+        price: 350,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'frs-4',
+        category: 'Fries & Loaded Fries',
+        name: 'Small Loaded Fries',
+        description: 'Golden fries topped with crispy chicken chunks, warm cheese sauce, and jalapeños.',
+        price: 350,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'frs-5',
+        category: 'Fries & Loaded Fries',
+        name: 'Large Loaded Fries',
+        description: 'Full tray of fries smothered in creamy cheese sauce, zinger bites, and smoky chipotle drizzle.',
+        price: 550,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'frs-6',
+        category: 'Fries & Loaded Fries',
+        name: 'Small Pizza Fries',
+        description: 'Oven-baked fries layered with pizza marinara, melted mozzarella, olives, and chicken.',
+        price: 400,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'frs-7',
+        category: 'Fries & Loaded Fries',
+        name: 'Large Pizza Fries',
+        description: 'Large baked platter of fries loaded with thick mozzarella cheese pull, chicken tikka, and olives.',
+        price: 600,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'frs-8',
+        category: 'Fries & Loaded Fries',
+        name: 'Family Pizza Fries',
+        description: 'Jumbo family-sized oven-baked pizza fries topped with double mozzarella, chicken chunks, jalapeños & olives.',
+        price: 800,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1518013431117-eb1465fa5752?auto=format&fit=crop&w=700&q=80'
+      },
+
+      // ==================== APPETIZERS & WINGS ====================
+      {
+        id: 'app-1',
+        category: 'Appetizers & Wings',
+        name: 'Hot Wings (6 Pcs)',
+        description: 'Crispy Spicy battered chicken wings served hot with garlic dip.',
+        price: 350,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'app-2',
+        category: 'Appetizers & Wings',
+        name: 'Oven Baked Wings (6 Pcs)',
+        description: 'Tender flame-baked wings glazed in smoky peri-peri and BBQ herbs.',
+        price: 380,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'app-3',
+        category: 'Appetizers & Wings',
+        name: 'Crispy Nuggets (6 Pcs)',
+        description: 'Golden bite-sized chicken nuggets served with signature mayo dip.',
+        price: 300,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'app-4',
+        category: 'Appetizers & Wings',
+        name: 'Calzone Chunks (4 Pcs)',
+        description: 'Oven-baked folded pizza dough pockets stuffed with spiced chicken, cheese, and herbs.',
+        price: 450,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=700&q=80'
+      },
+
+      // ==================== DRINKS ====================
+      {
+        id: 'drk-1',
+        category: 'Drinks',
+        name: 'Fresh Lime',
+        description: 'Refreshing chilled sparkling fresh lime soda with a hint of black salt.',
+        price: 120,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=80'
+      },
+      {
+        id: 'drk-2',
+        category: 'Drinks',
+        name: 'Mint Margarita',
+        description: 'Icy blended fresh mint leaves, lemon juice, crushed ice, and sparkling soda.',
+        price: 180,
+        bestSeller: false,
+        image: 'https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=700&q=80'
+      }
+    ];
+
+    let activeCategory = 'All';
+    let searchQuery = '';
+    let cart = [];
+
+    function handleImageFallback(imgEl, labelText) {
+      imgEl.onerror = null;
+      const encodedText = encodeURIComponent(labelText || 'Shanzai Kitchen');
+      imgEl.src = `https://placehold.co/700x500/181e29/facc15?text=${encodedText}`;
+    }
+
+    /**
+     * SWITCH BETWEEN MODERN ORDER CARDS & PRINTED MENU CARD VIEW
+     */
+    function switchMenuViewMode(mode) {
+      const cardWrapper = document.getElementById('interactiveMenuViewWrapper');
+      const printedWrapper = document.getElementById('printedMenuViewWrapper');
+      const btnCard = document.getElementById('btnCardView');
+      const btnPrinted = document.getElementById('btnPrintedView');
+
+      if (mode === 'printed') {
+        cardWrapper.classList.add('hidden');
+        printedWrapper.classList.remove('hidden');
+        btnPrinted.className = 'px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 bg-brandRed text-white shadow transition';
+        btnCard.className = 'px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 text-gray-300 hover:text-white transition';
+      } else {
+        printedWrapper.classList.add('hidden');
+        cardWrapper.classList.remove('hidden');
+        btnCard.className = 'px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 bg-brandRed text-white shadow transition';
+        btnPrinted.className = 'px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 text-gray-300 hover:text-white transition';
+      }
+    }
+
+    function openPrintedMenuView() {
+      switchMenuViewMode('printed');
+      document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    /**
+     * RENDER POPULAR CATEGORIES
+     */
+    function renderCategoriesSection() {
+      const grid = document.getElementById('categoriesGrid');
+      if (!grid) return;
+
+      grid.innerHTML = CATEGORIES_DATA.map(cat => {
+        const count = MENU_ITEMS.filter(i => i.category === cat.name).length;
+        return `
+          <div onclick="scrollToCategory('${cat.name.replace(/'/g, "\\'")}')" class="premium-card overflow-hidden cursor-pointer group flex items-center gap-4 p-3.5">
+            <div class="img-zoom-wrap w-24 h-24 rounded-xl flex-shrink-0">
+              <img
+                src="${cat.image}"
+                alt="${cat.name}"
+                loading="lazy"
+                onerror="handleImageFallback(this, '${cat.name.replace(/'/g, "\\'")}')"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex-1 min-w-0 pr-1">
+              <div class="flex items-center justify-between gap-2">
+                <h3 class="font-display text-xl font-bold uppercase text-brandCream group-hover:text-brandGold transition-colors truncate">
+                  ${cat.name}
+                </h3>
+                <span class="text-[11px] text-brandGold font-bold">${count} items</span>
+              </div>
+              <p class="text-gray-400 text-xs mt-1 line-clamp-2 leading-relaxed">
+                ${cat.tagline}
+              </p>
+              <span class="inline-flex items-center gap-1.5 text-brandRed text-xs font-bold mt-2 group-hover:translate-x-1 transition-transform">
+                <span>Browse ${cat.name}</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    /**
+     * RENDER CATEGORY FILTER TABS
+     */
+    function renderCategoryFilterTabs() {
+      const container = document.getElementById('categoryFilterTabs');
+      if (!container) return;
+
+      const allCategories = ['All', ...CATEGORIES_DATA.map(c => c.name)];
+
+      container.innerHTML = allCategories.map(catName => {
+        const isActive = activeCategory === catName;
+        const activeClasses = isActive
+          ? 'bg-brandRed text-white border-brandRed'
+          : 'bg-charcoal-800 text-gray-300 border-white/10 hover:bg-charcoal-700 hover:text-white';
+
+        return `
+          <button
+            onclick="setActiveCategory('${catName.replace(/'/g, "\\'")}')"
+            class="px-3.5 py-1.5 rounded-xl border text-xs font-bold whitespace-nowrap transition ${activeClasses}"
+          >
+            ${catName}
+          </button>
+        `;
+      }).join('');
+    }
+
+    /**
+     * SELECT PIZZA SIZE (S / M / L) & UPDATE CARD PRICE LIVE
+     */
+    function selectPizzaSize(itemId, sizeKey) {
+      const item = MENU_ITEMS.find(i => i.id === itemId);
+      if (!item || !item.sizes) return;
+
+      item.selectedSize = sizeKey;
+      item.price = item.sizes[sizeKey];
+      renderMenuSections();
+      renderFeaturedSection();
+    }
+
+    /**
+     * RENDER COMPLETE RESTAURANT MENU CARDS
+     */
+    function renderMenuSections() {
+      const container = document.getElementById('menuSectionsContainer');
+      const emptyState = document.getElementById('menuEmptyState');
+      if (!container) return;
+
+      const query = searchQuery.trim().toLowerCase();
+      const categoriesToRender = activeCategory === 'All'
+        ? CATEGORIES_DATA
+        : CATEGORIES_DATA.filter(c => c.name === activeCategory);
+
+      let totalMatched = 0;
+      let html = '';
+
+      categoriesToRender.forEach(cat => {
+        const items = MENU_ITEMS.filter(item => {
+          const matchesCat = item.category === cat.name;
+          const matchesQuery = !query ||
+            item.name.toLowerCase().includes(query) ||
+            item.description.toLowerCase().includes(query);
+          return matchesCat && matchesQuery;
+        });
+
+        if (items.length > 0) {
+          totalMatched += items.length;
+
+          const cardsHTML = items.map(item => {
+            const hasSizes = Boolean(item.sizes);
+            const sizeSelectorHTML = hasSizes ? `
+              <div class="mt-3 pt-2.5 border-t border-white/5 flex items-center justify-between gap-1">
+                <span class="text-[11px] text-gray-400 font-semibold">Size:</span>
+                <div class="inline-flex rounded-lg bg-charcoal-900 p-0.5 border border-white/10">
+                  ${Object.keys(item.sizes).map(sz => `
+                    <button
+                      onclick="selectPizzaSize('${item.id}', '${sz}')"
+                      class="px-2.5 py-1 rounded-md text-[11px] font-bold transition ${
+                        item.selectedSize === sz
+                          ? 'bg-brandRed text-white'
+                          : 'text-gray-400 hover:text-white'
+                      }"
+                    >
+                      ${sz} (Rs.${item.sizes[sz]})
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+            ` : '';
+
+            return `
+              <article class="premium-card overflow-hidden flex flex-col justify-between group">
+                <div>
+                  <div class="img-zoom-wrap h-48 w-full">
+                    <img
+                      src="${item.image}"
+                      alt="${item.name}"
+                      loading="lazy"
+                      onerror="handleImageFallback(this, '${item.name.replace(/'/g, "\\'")}')"
+                      class="w-full h-full object-cover"
+                    />
+                    ${item.bestSeller ? `
+                      <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-brandGold text-charcoal-950 text-[10px] font-extrabold uppercase tracking-wider shadow">
+                        Best Seller
+                      </span>
+                    ` : ''}
+                  </div>
+
+                  <div class="p-5 pb-3">
+                    <h4 class="font-display text-lg font-bold text-brandCream group-hover:text-brandGold transition-colors">
+                      ${item.name}
+                    </h4>
+                    <p class="text-gray-400 text-xs mt-1.5 leading-relaxed">
+                      ${item.description}
+                    </p>
+                    ${sizeSelectorHTML}
+                  </div>
+                </div>
+
+                <div class="px-5 pb-5 pt-3 flex items-center justify-between gap-3 border-t border-white/5 mt-2">
+                  <div>
+                    <span class="font-display text-xl font-bold text-brandGold">
+                      Rs. ${item.price.toLocaleString()}
+                    </span>
+                    ${hasSizes ? `<span class="text-[11px] text-gray-400 ml-1">(${item.selectedSize})</span>` : ''}
+                  </div>
+                  <button
+                    onclick="addToCart('${item.id}')"
+                    class="px-4 py-2 rounded-xl bg-charcoal-800 hover:bg-brandRed text-brandCream hover:text-white border border-white/10 hover:border-brandRed font-bold text-xs flex items-center gap-1.5 transition"
+                  >
+                    <i class="fa-solid fa-plus text-[10px]"></i>
+                    <span>Add to Bag</span>
+                  </button>
+                </div>
+              </article>
+            `;
+          }).join('');
+
+          html += `
+            <div id="cat-section-${cat.id}" class="scroll-mt-36">
+              <div class="flex items-center justify-between pb-3 mb-6 border-b border-white/10">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-1.5 h-6 rounded-full bg-brandRed"></span>
+                  <h3 class="font-display text-2xl font-bold uppercase text-brandCream">${cat.name}</h3>
+                </div>
+                <span class="text-xs text-gray-400 font-semibold">${items.length} ${items.length === 1 ? 'Item' : 'Items'}</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                ${cardsHTML}
+              </div>
+            </div>
+          `;
+        }
+      });
+
+      if (totalMatched === 0) {
+        container.innerHTML = '';
+        emptyState.classList.remove('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+        container.innerHTML = html;
+      }
+    }
+
+    /**
+     * RENDER AUTHENTIC PRINTED MENU CARD REPLICA LISTS
+     */
+    function renderPrintedMenuCard() {
+      const renderSimpleRows = (catName, targetId) => {
+        const el = document.getElementById(targetId);
+        if (!el) return;
+        const list = MENU_ITEMS.filter(i => i.category === catName);
+        el.innerHTML = list.map(item => `
+          <div
+            onclick="addToCart('${item.id}')"
+            class="flex items-center justify-between py-1.5 px-2.5 rounded-lg hover:bg-stone-300/70 cursor-pointer transition group"
+          >
+            <span class="font-bold text-stone-800 group-hover:text-brandRed transition flex items-center gap-1.5">
+              <span>${item.name}</span>
+              <i class="fa-solid fa-plus-circle text-xs text-brandRed opacity-0 group-hover:opacity-100 transition"></i>
+            </span>
+            <span class="font-display font-bold text-stone-900">Rs. ${item.price}</span>
+          </div>
+        `).join('');
+      };
+
+      renderSimpleRows('Burgers', 'printedBurgersList');
+      renderSimpleRows('Rolls & Shawarma', 'printedRollsList');
+      renderSimpleRows('Fries & Loaded Fries', 'printedFriesList');
+      renderSimpleRows('Drinks', 'printedDrinksList');
+
+      // Render Pizza S / M / L Table Rows
+      const pizzaEl = document.getElementById('printedPizzasList');
+      if (pizzaEl) {
+        const pizzas = MENU_ITEMS.filter(i => i.category === "Pizza's");
+        pizzaEl.innerHTML = pizzas.map(item => `
+          <div class="grid grid-cols-12 items-center py-1.5 px-2 rounded-lg hover:bg-stone-300/60 transition">
+            <span class="col-span-6 font-bold text-stone-800 text-xs sm:text-sm pr-1">${item.name}</span>
+            <button onclick="addPizzaSizeToCart('${item.id}', 'S')" class="col-span-2 text-center font-display font-bold text-stone-900 hover:text-brandRed hover:underline text-xs sm:text-sm" title="Add Small">
+              ${item.sizes.S}
+            </button>
+            <button onclick="addPizzaSizeToCart('${item.id}', 'M')" class="col-span-2 text-center font-display font-bold text-stone-900 hover:text-brandRed hover:underline text-xs sm:text-sm" title="Add Medium">
+              ${item.sizes.M}
+            </button>
+            <button onclick="addPizzaSizeToCart('${item.id}', 'L')" class="col-span-2 text-right font-display font-bold text-stone-900 hover:text-brandRed hover:underline text-xs sm:text-sm" title="Add Large">
+              ${item.sizes.L}
+            </button>
+          </div>
+        `).join('');
+      }
+    }
+
+    function addPizzaSizeToCart(itemId, sizeKey) {
+      const item = MENU_ITEMS.find(i => i.id === itemId);
+      if (!item || !item.sizes) return;
+      item.selectedSize = sizeKey;
+      item.price = item.sizes[sizeKey];
+      addToCart(itemId);
+    }
+
+    /**
+     * RENDER FEATURED BEST SELLERS
+     */
+    function renderFeaturedSection() {
+      const grid = document.getElementById('featuredGrid');
+      if (!grid) return;
+
+      const featured = MENU_ITEMS.filter(i => i.bestSeller).slice(0, 3);
+
+      grid.innerHTML = featured.map(item => `
+        <article class="premium-card overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="img-zoom-wrap h-56 w-full">
+              <img
+                src="${item.image}"
+                alt="${item.name}"
+                loading="lazy"
+                onerror="handleImageFallback(this, '${item.name.replace(/'/g, "\\'")}')"
+                class="w-full h-full object-cover"
+              />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-brandGold text-charcoal-950 font-extrabold text-[11px] uppercase tracking-wider">
+                <i class="fa-solid fa-star mr-1"></i> Best Seller
+              </span>
+            </div>
+            <div class="p-5">
+              <div class="flex items-baseline justify-between gap-2">
+                <h3 class="font-display text-xl font-bold text-brandCream">${item.name}</h3>
+                <span class="font-display text-xl font-bold text-brandGold whitespace-nowrap">
+                  Rs. ${item.price.toLocaleString()} ${item.sizes ? `(${item.selectedSize})` : ''}
+                </span>
+              </div>
+              <p class="text-gray-400 text-xs mt-2 leading-relaxed">${item.description}</p>
+            </div>
+          </div>
+          <div class="px-5 pb-5">
+            <button
+              onclick="addToCart('${item.id}')"
+              class="w-full py-3 rounded-xl bg-brandRed hover:bg-brandRed-dark text-white font-bold text-xs uppercase tracking-wider transition"
+            >
+              Add to Order Bag
+            </button>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    /**
+     * FILTER & SEARCH ACTIONS
+     */
+    function setActiveCategory(catName) {
+      activeCategory = catName;
+      renderCategoryFilterTabs();
+      renderMenuSections();
+    }
+
+    function scrollToCategory(catName) {
+      switchMenuViewMode('cards');
+      activeCategory = catName;
+      renderCategoryFilterTabs();
+      renderMenuSections();
+      document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleMenuSearch(val) {
+      searchQuery = val;
+      document.getElementById('clearSearchBtn')?.classList.toggle('hidden', !val.trim());
+      renderMenuSections();
+    }
+
+    function clearMenuSearch() {
+      const input = document.getElementById('menuSearchInput');
+      if (input) input.value = '';
+      handleMenuSearch('');
+    }
+
+    function resetMenuFilters() {
+      activeCategory = 'All';
+      clearMenuSearch();
+      renderCategoryFilterTabs();
+      renderMenuSections();
+    }
+
+    /**
+     * SHOPPING CART LOGIC (SUPPORTS S / M / L PIZZA VARIANTS)
+     */
+    function addToCart(itemId) {
+      const item = MENU_ITEMS.find(i => i.id === itemId);
+      if (!item) return;
+
+      const cartKey = item.sizes ? `${item.id}-${item.selectedSize}` : item.id;
+      const displayName = item.sizes ? `${item.name} (${item.selectedSize})` : item.name;
+
+      const existing = cart.find(c => c.cartKey === cartKey);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({
+          cartKey,
+          id: item.id,
+          name: displayName,
+          price: item.price,
+          image: item.image,
+          qty: 1
+        });
+      }
+
+      updateCartUI();
+      showToast(`Added ${displayName} — Rs. ${item.price}`);
+    }
+
+    function updateCartQty(cartKey, delta) {
+      const idx = cart.findIndex(c => c.cartKey === cartKey);
+      if (idx === -1) return;
+
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) cart.splice(idx, 1);
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const count = cart.reduce((sum, i) => sum + i.qty, 0);
+      const total = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+
+      const badge = document.getElementById('navCartCount');
+      if (badge) {
+        badge.textContent = count;
+        badge.classList.remove('badge-pop');
+        void badge.offsetWidth;
+        badge.classList.add('badge-pop');
+      }
+
+      const subtext = document.getElementById('cartHeaderSubtext');
+      if (subtext) subtext.textContent = `${count} ${count === 1 ? 'item' : 'items'} • Free Delivery in Canal Town`;
+
+      const container = document.getElementById('cartItemsContainer');
+      if (container) {
+        if (cart.length === 0) {
+          container.innerHTML = `
+            <div class="text-center py-16 px-4">
+              <p class="text-brandCream font-semibold text-sm">Your Shanzai order bag is empty</p>
+              <p class="text-xs text-gray-400 mt-1">Select burgers, pizzas, or rolls from our menu to begin.</p>
+            </div>
+          `;
+        } else {
+          container.innerHTML = cart.map(item => `
+            <div class="p-3 rounded-xl bg-charcoal-800 border border-white/10 flex items-center gap-3">
+              <img
+                src="${item.image}"
+                alt="${item.name}"
+                onerror="handleImageFallback(this, '${item.name.replace(/'/g, "\\'")}')"
+                class="w-14 h-14 rounded-lg object-cover flex-shrink-0"
+              />
+              <div class="flex-1 min-w-0">
+                <h4 class="text-xs font-bold text-brandCream truncate">${item.name}</h4>
+                <span class="text-xs text-brandGold font-semibold">Rs. ${(item.price * item.qty).toLocaleString()}</span>
+              </div>
+              <div class="flex items-center gap-1.5 bg-charcoal-900 px-2 py-1 rounded-lg border border-white/10">
+                <button onclick="updateCartQty('${item.cartKey}', -1)" class="w-5 h-5 rounded bg-charcoal-800 hover:bg-brandRed text-white text-[10px] flex items-center justify-center">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <span class="text-xs font-bold w-4 text-center">${item.qty}</span>
+                <button onclick="updateCartQty('${item.cartKey}', 1)" class="w-5 h-5 rounded bg-charcoal-800 hover:bg-brandRed text-white text-[10px] flex items-center justify-center">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          `).join('');
+        }
+      }
+
+      const totEl = document.getElementById('cartTotalText');
+      if (totEl) totEl.textContent = `Rs. ${total.toLocaleString()}`;
+    }
+
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cartDrawer');
+      const backdrop = document.getElementById('cartDrawerBackdrop');
+      if (!drawer || !backdrop) return;
+
+      if (open) {
+        backdrop.classList.remove('hidden');
+        setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
+        drawer.classList.remove('translate-x-full');
+      } else {
+        backdrop.classList.add('opacity-0');
+        drawer.classList.add('translate-x-full');
+        setTimeout(() => backdrop.classList.add('hidden'), 300);
+      }
+    }
+
+    function checkoutViaWhatsApp() {
+      if (cart.length === 0) {
+        showToast('Your bag is empty', 'warning');
+        return;
+      }
+      const name = document.getElementById('customerNameInput')?.value.trim() || 'Customer';
+      const address = document.getElementById('customerAddressInput')?.value.trim() || 'Canal Town / University of Peshawar';
+      const total = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+
+      let lines = [
+        `*NEW ORDER — SHANZAI پخلنځي (Canal Town, Peshawar)*`,
+        `Customer: ${name}`,
+        `Address/Note: ${address}`,
+        `----------------------------`
+      ];
+      cart.forEach(i => {
+        lines.push(`• ${i.qty}x ${i.name} — Rs. ${(i.price * i.qty).toLocaleString()}`);
+      });
+      lines.push(`----------------------------`);
+      lines.push(`*TOTAL: Rs. ${total.toLocaleString()} (Free Home Delivery)*`);
+
+      window.open(`https://wa.me/923190192390?text=${encodeURIComponent(lines.join('\n'))}`, '_blank');
+    }
+
+    function placeInstantDemoOrder() {
+      if (cart.length === 0) {
+        showToast('Please add items to your bag first', 'warning');
+        return;
+      }
+      const total = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+      cart = [];
+      updateCartUI();
+      toggleCartDrawer(false);
+      showToast(`Order confirmed! Total Rs. ${total.toLocaleString()} is being prepared at Shanzai Canal Town.`);
+    }
+
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileNavDrawer');
+      const icon = document.getElementById('mobileMenuIcon');
+      if (!drawer || !icon) return;
+
+      const isHidden = drawer.classList.contains('hidden');
+      drawer.classList.toggle('hidden', !isHidden);
+      icon.className = isHidden ? 'fa-solid fa-xmark text-lg' : 'fa-solid fa-bars text-lg';
+    }
+
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toastContainer');
+      if (!container) return;
+
+      const toast = document.createElement('div');
+      const iconClass = type === 'warning' ? 'fa-circle-exclamation text-brandGold' : 'fa-circle-check text-emerald-400';
+
+      toast.className = `toast-enter pointer-events-auto flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-charcoal-900 border border-white/15 text-brandCream shadow-xl text-xs font-semibold`;
+      toast.innerHTML = `<i class="fa-solid ${iconClass}"></i><span>${message}</span>`;
+
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transition = 'opacity 0.2s ease';
+        setTimeout(() => toast.remove(), 200);
+      }, 2400);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+      renderCategoriesSection();
+      renderCategoryFilterTabs();
+      renderMenuSections();
+      renderPrintedMenuCard();
+      renderFeaturedSection();
+      updateCartUI();
+    });
+  </script>
+</body>
+</html>
